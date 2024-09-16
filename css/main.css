@@ -1,22 +1,28 @@
+
+
+/* questions 1. why leave margins and paddings, how to know especially when it changes, design doc did not specify
+            2. why, when include box-sizing
+            3. bottom section width issue */
+
 /******** GLOBAL STYLES ********/
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: .9em;
-	color: #000000;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  color: #000000;
 }
 
 /* The width property has been changed to max-width */
 .content-wrapper {
-	max-width: 1200px;
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	flex-flow: row wrap;
-	/* removed--> margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  /* removed--> margin: 0 auto;
 	overflow: auto; */
 }
 
@@ -24,165 +30,165 @@ h1,
 h2,
 h3,
 h4 {
-	text-transform: uppercase;
-	font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h1 {
-	/* 30px */
-	font-size: 1.875em;
+  /* 30px */
+  font-size: 1.875em;
 }
 
 h2 {
-	/* 24px */
-	font-size: 1.5em;
+  /* 24px */
+  font-size: 1.5em;
 }
 
 h3 {
-	/* 20px */
-	font-size: 1.25em;
+  /* 20px */
+  font-size: 1.25em;
 }
 
 h4 {
-	/* 12px */
-	font-size: .75em;
+  /* 12px */
+  font-size: 0.75em;
 }
 
 p {
-	line-height: 36px;
+  font-size: 1rem;
+  line-height: 36px;
 }
 
 /******** HEADER STYLES ********/
 /* The widths are in a percentage! */
 header {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	/* removed--> height: 110px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* removed--> height: 110px;
 	margin: 0 auto; */
 }
 
 header h1 {
-	width: 100%;
-	/* removed--> float: left;
+  margin: 0;
+  /* removed--> float: left;
 	margin: 0; */
-	padding: 70px 0 20px 0; 
-	border-bottom: 3px solid #77A466;
+  padding: 38px 0 20px 0;
+  border-bottom: 3px solid #77a466;
+  width: 100%;
 }
 
 header h1 span {
-	width: 100%;
-	color: #45610E;
+  color: #45610e;
 }
 
 header nav {
-	/* removed--> float: right;
-	padding: 46px 0; */
+  /* removed--> float: right; */
+	padding: 20px 0; 
 }
 
 header nav ul {
-	padding: 0 0 10px 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 header nav ul li {
-	width: 100%;
-	/* removed--> display: inline-block; */
-	/* 14px */
-	font-size: .875rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	list-style-type: none;
-	padding: 10px 0px;
+  /* removed--> display: inline-block; */
+  /* 14px */
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  width: 100%;
 }
 
 header nav ul li a {
-	text-decoration: none;
-	color: #45610E;
+  text-decoration: none;
+  color: #45610e;
 }
 
 /********  MAIN STYLES ********/
 /******** TOP SECTION ********/
 /* The widths are in a percentage! */
 .main-image img {
-	width: 100%;
-	border-top: 3px solid #77A466;
-	border-bottom: 3px solid #77a466; 
+  width: 100%;
+  border-top: 3px solid #77a466;
+  border-bottom: 3px solid #77a466;
 }
 
-
 .main-title h2 {
-	color: #45610E;
-	/* removed--> padding: 5px 0; */
+  color: #45610e;
+  padding: 5px 0; 
 }
 
 /******** BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
-	display: flex;
-	justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .bottom-section .content-wrapper {
-	display: flex;
-	justify-content: center;
-	border-top: 5px solid #EEE;
-	border-bottom: 5px solid #EEE;
+  border-top: 5px solid #eee;
+  border-bottom: 5px solid #eee;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 100%;
-	/* removed--> box-sizing: border-box;
-	float: left;
-	padding: 0 40px; */
+  /* width: 100%; why not here for all three instead of each one separately? */
+  /* removed--> why keep box-sizing here? */
+  box-sizing: border-box;
+	/* padding: 0 40px; */
 }
 
 .section-one {
-	/* width: 29%; */
+  /* width: 29%; */
+  width: 100%;
 }
 
 .section-two {
-	/* width: 42%; */
-	border-top: 5px solid #EEE;
-	border-bottom: 5px solid #EEE;
+  /* width: 42%; */
+  width: 100%;
+  border-top: 5px solid #eee;
+  border-bottom: 5px solid #eee;
 }
 
 .section-three {
-	/* width: 29%; */
+  /* width: 29%; */
+  width: 100%;
 }
 
 .bottom-section h3 {
-	/* removed--> margin: 30px 0; */
+  margin: 30px 0;
 }
 
 .menu-list {
-	padding-left: 0; 
-	list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 .menu-list li {
-	color: #45610E;
-	/* 16px */
-	font-size: 1rem;
-	line-height: 36px;
+  color: #45610e;
+  /* 16px */
+  font-size: 1rem;
+  line-height: 36px;
 }
 
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
-	display: flex;
-	justify-content: center;
-	/* removed--> text-align: center;
-	 margin-top: 8px; */
+  display: flex;
+  justify-content: center;
+  /* removed--> text-align: center; */
+	margin-top: 8px;
 }
 
 footer span {
-	font-family: 'Galada', cursive;
-	text-transform: lowercase;
-	color: #45610E;
-	/* 14px */
-	font-size: .875rem;
+  font-family: "Galada", cursive;
+  text-transform: lowercase;
+  color: #45610e;
+  /* 14px */
+  font-size: 0.875rem;
 }
